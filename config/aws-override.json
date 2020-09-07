@@ -1,0 +1,4 @@
+{ 
+    "sqs_endpoint": "http://aws_services:4576",
+    "sns_endpoint": "http://aws_services:4575"
+}
