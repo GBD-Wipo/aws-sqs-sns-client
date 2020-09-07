@@ -1,5 +1,5 @@
 { 
     "accessKeyId": "foobar",
     "secretAccessKey": "foobar",
-    "region": "eu-west-2"
+    "region": "eu-west-1"
 }
