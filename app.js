@@ -65,7 +65,7 @@ sqsController(aws, app, ui);
 var port = process.env.PORT || 3000
 
 // configure assets and views
-app.use('/assets', express.static(__dirname+'/public'))
+app.use('/sqsadmin/assets', express.static(__dirname+'/public'))
 app.set('views', __dirname+'/views');
 app.set('view engine', 'ejs')
 
