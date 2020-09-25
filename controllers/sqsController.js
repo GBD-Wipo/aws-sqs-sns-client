@@ -16,7 +16,7 @@ module.exports = function (aws, app,ui) {
     
    
     // 1. create Queue 
-    app.post('/sqs-queue', function (req, res) {
+    app.post('/sqsadmin/sqs-queue', function (req, res) {
 
         ui.menuitem = 1
     
@@ -43,7 +43,7 @@ module.exports = function (aws, app,ui) {
 
 
     // 2. list all queues (no input required)
-    app.get('/sqs-queue/list', function (req, res){
+    app.get('/sqsadmin/sqs-queue/list', function (req, res){
 
         ui.menuitem = 2
     
@@ -67,7 +67,7 @@ module.exports = function (aws, app,ui) {
 
 
     // 3. get Queue URL. input = queue name
-    app.get('/sqs-queue', function (req, res) {
+    app.get('/sqsadmin/sqs-queue', function (req, res) {
 
         ui.menuitem = 3
 
@@ -95,7 +95,7 @@ module.exports = function (aws, app,ui) {
 
 
     // 4. get Queue Attributes. input = queue URL
-    app.get('/sqs-queue/attributes', function (req, res) {
+    app.get('/sqsadmin/sqs-queue/attributes', function (req, res) {
 
         ui.menuitem = 4
 
@@ -124,7 +124,7 @@ module.exports = function (aws, app,ui) {
     
     
     // 5. post message to queue. input = queue URL and message
-    app.post ('/sqs-queue/message', function (req, res) {
+    app.post ('/sqsadmin/sqs-queue/message', function (req, res) {
 
         ui.menuitem = 5
 
@@ -150,7 +150,7 @@ module.exports = function (aws, app,ui) {
 
 
     // 6. receive (get) message. input = queue URL
-    app.get('/sqs-queue/message', function (req, res) {
+    app.get('/sqsadmin/sqs-queue/message', function (req, res) {
 
         ui.menuitem = 6
 
@@ -183,7 +183,7 @@ module.exports = function (aws, app,ui) {
 
 
     // 7. delete message from queue
-    app.post('/sqs-queue/message/delete', function (req, res) {
+    app.post('/sqsadmin/sqs-queue/message/delete', function (req, res) {
 
         ui.menuitem = 7
 
@@ -210,7 +210,7 @@ module.exports = function (aws, app,ui) {
 
 
     // 8. purge queue - dangerzone
-    app.post('/sqs-queue/purge', function (req, res) {
+    app.post('/sqsadmin/sqs-queue/purge', function (req, res) {
 
         ui.menuitem = 8
 
@@ -235,7 +235,7 @@ module.exports = function (aws, app,ui) {
 
 
     // 9. delete queue - dangerzone
-    app.post('/sqs-queue/delete', function (req, res) {
+    app.post('/sqsadmin/sqs-queue/delete', function (req, res) {
        
         ui.menuitem = 9
         

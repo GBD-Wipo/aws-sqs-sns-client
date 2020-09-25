@@ -71,7 +71,7 @@ app.set('view engine', 'ejs')
 
 
 // login and serve up index
-app.get('/', function (req, res) {
+app.get('/sqsadmin/', function (req, res) {
     res.setHeader('Content-Type', 'text/html');
     res.render('./index', {ui: ui})
 })

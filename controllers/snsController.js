@@ -14,7 +14,7 @@ module.exports = function (aws, app, ui) {
 
 
     // 11. create Topic - input = topic name
-    app.post('/sns', function (req, res) {
+    app.post('/sqsadmin/sns', function (req, res) {
 
         ui.menuitem = 11
     
@@ -41,7 +41,7 @@ module.exports = function (aws, app, ui) {
     })
 
     // 12. subscribe queue to SNS topic
-    app.post('/sns/subscribe-queue', function (req, res) {
+    app.post('/sqsadmin/sns/subscribe-queue', function (req, res) {
         
         ui.menuitem = 12
     
@@ -71,7 +71,7 @@ module.exports = function (aws, app, ui) {
 
 
     // 13. subscribe email to SNS topic
-    app.post('/sns/subscribe-email', function (req, res) {
+    app.post('/sqsadmin/sns/subscribe-email', function (req, res) {
 
         ui.menuitem = 13
     
@@ -100,7 +100,7 @@ module.exports = function (aws, app, ui) {
 
 
     // 14. Send message to SNS topics
-    app.post('/sns/message', function (req, res) {
+    app.post('/sqsadmin/sns/message', function (req, res) {
 
         ui.menuitem = 14
 
@@ -128,7 +128,7 @@ module.exports = function (aws, app, ui) {
 
 
     // 15. List SNS topics
-    app.get('/sns', function (req, res) {
+    app.get('/sqsadmin/sns', function (req, res) {
 
         ui.menuitem = 15
 
@@ -172,7 +172,7 @@ module.exports = function (aws, app, ui) {
 
 
     // 16. Delete Topic
-    app.post('/sns/delete-topic', function (req, res) {
+    app.post('/sqsadmin/sns/delete-topic', function (req, res) {
 
         ui.menuitem = 16
 
@@ -198,7 +198,7 @@ module.exports = function (aws, app, ui) {
 
 
     // 17. List SNS subscriptions
-    app.get('/sns/subscription', function (req, res) {
+    app.get('/sqsadmin/sns/subscription', function (req, res) {
 
         ui.menuitem = 17
 
@@ -242,7 +242,7 @@ module.exports = function (aws, app, ui) {
     
 
     // 18. Unsubscribe
-    app.post('/sns/delete-subscription', function (req, res) {
+    app.post('/sqsadmin/sns/delete-subscription', function (req, res) {
 
         ui.menuitem = 18
 

@@ -1,7 +1,7 @@
 
 <!-- 1. Create Queue -->
 <div id="1" class="menu-div" style="display:none">
-    <form method="POST" action="/sqs-queue">
+    <form method="POST" action="/sqsadmin/sqs-queue">
         <span>Create Queue</span><hr><br>
         <label>Queue Name:</label>
         <input placeholder="Queue Name" id="queuename" type="text" name="queuename" value="<%= ui.def_sqsname %>" required><br><br>
@@ -13,7 +13,7 @@
 
 <!-- 2. List all Queues -->    
 <div id="2" class="menu-div" style="display:none">
-    <form  method="GET" action="/sqs-queue/list">
+    <form  method="GET" action="/sqsadmin/sqs-queue/list">
         <span>List Queues</span><hr><br><br>
         <input type="submit" value="List Queue URLs"><br><br>
         <label>Response:</label>
@@ -23,7 +23,7 @@
 
 <!-- 3. Get Queue Url -->    
 <div id="3" class="menu-div" style="display:none">
-    <form  method="GET" action="/sqs-queue">
+    <form  method="GET" action="/sqsadmin/sqs-queue">
         <span>Get Queue Url</span><hr><br>
         <label>Queue Name:</label>
         <input placeholder="Queue Name" id="queuename" type="text" name="queuename" value="<%= ui.def_sqsname %>"><br><br>
@@ -35,7 +35,7 @@
 
 <!-- 4. Get Queue Attributes -->
 <div id="4" class="menu-div" style="display:none">
-    <form  method="GET" action="/sqs-queue/attributes">
+    <form  method="GET" action="/sqsadmin/sqs-queue/attributes">
         <span>Get Queue Attributes</span><hr><br>
         <label>Queue URL:</label>
         <input placeholder="Queue Url" id="queueurl" type="text" name="queueurl"value="<%= ui.def_sqsurl %>"required><br><br>
@@ -47,7 +47,7 @@
 
 <!-- 5. Post Message to Queue -->    
 <div id="5" class="menu-div" style="display:none">
-    <form method="POST" action="/sqs-queue/message">
+    <form method="POST" action="/sqsadmin/sqs-queue/message">
         <span>Post Message To Queue</span><hr><br>
         <label>Queue URL:</label>
         <input placeholder="Queue Url" id="queueurl" type="text" name="queueurl" value="<%= ui.def_sqsurl %>" required><br><br>
@@ -61,7 +61,7 @@
 
 <!--6. Get Message from Queue -->    
 <div id="6" class="menu-div" style="display:none">
-    <form method="GET" action="/sqs-queue/message">
+    <form method="GET" action="/sqsadmin/sqs-queue/message">
         <span>Get Message From Queue</span><hr><br>
         <label>Queue URL:</label>
         <input placeholder="Queue Url" id="queueurl" type="text" name="queueurl" value="<%= ui.def_sqsurl %>" required><br><br>
@@ -73,7 +73,7 @@
 
 <!-- 7. Delete Message from Queue -->    
 <div id="7" class="menu-div" style="display:none">
-    <form method="POST" action="/sqs-queue/message/delete">
+    <form method="POST" action="/sqsadmin/sqs-queue/message/delete">
     <span>Delete Message From Queue</span><hr><br>
         <label>Queue URL:</label>
         <input placeholder="Queue Url" id="queueurl" type="text" name="queueurl" value="<%= ui.def_sqsurl %>" required> <br><br>
@@ -87,7 +87,7 @@
 
 <!-- 8. Purge Queue (delete all messsages) -->    
 <div id="8" class="menu-div" style="display:none">
-    <form method="POST" action="/sqs-queue/purge">
+    <form method="POST" action="/sqsadmin/sqs-queue/purge">
     <span>Purge Messages From Queue</span><hr><br>
         <label>Queue URL:</label>
         <input placeholder="Queue Url" id="queueurl" type="text" name="queueurl" value="<%= ui.def_sqsurl %>" required><br><br>
@@ -99,7 +99,7 @@
 
 <!-- 9. Delete Queue (deletes queue and all messsages) --> 
 <div id="9" class="menu-div" style="display:none">   
-    <form method="POST" action="/sqs-queue/delete">
+    <form method="POST" action="/sqsadmin/sqs-queue/delete">
         <span>Delete Queue</span><hr><br>
         <label>Queue URL:</label>
         <input placeholder="Queue Url" id="queueurl" type="text" name="queueurl" value="<%= ui.def_sqsurl %>" required><br><br>
